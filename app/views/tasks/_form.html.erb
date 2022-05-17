@@ -1,0 +1,13 @@
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <% if @task.new_record? %>
+    <%= f.submit "Create the task",class: "btn btn-primary" %>
+  <% else %>
+    <%= f.check_box :completed %>
+    <%= f.label :completed %>
+    <br>
+    <%= f.submit "Update the task", class: "btn btn-primary" %>
+  <% end %>
+<% end %>
+<br>

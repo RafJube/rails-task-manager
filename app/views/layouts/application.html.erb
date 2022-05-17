@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+      <p><%= link_to 'Back to the List', tasks_path, class: "btn btn-primary" %></p>
+    </div>
   </body>
 </html>
